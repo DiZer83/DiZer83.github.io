@@ -18,6 +18,7 @@
 
 	<meta name="keywords" content="Именинники группы Вызов" />
 	<meta name="description" content="Именинники группы Вызов" />
+
 </head>
 
 <body>
@@ -25,8 +26,11 @@
 		<div class="container">
 			<div class="row">
 				<div id="datepicker"></div>
-				$(function(){ 2 $.datepicker.setDefaults( 3 $.extend($.datepicker.regional["ru"]) 4 ); 5 $("#datepicker").datepicker(); 6
+				<script>
+					$(function(){
+			 $.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));$("#datepicker").datepicker();
 				});
+				</script>
 			</div>
 
 		</div>
