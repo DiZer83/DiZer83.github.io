@@ -16,11 +16,12 @@
 	<section style="margin-top: 0px;">
 		<div class="container">
 			<div class="row">
-             <input type="text" id="datepicker"><input type="button" value="ok" onclick="dd();">
+             <input type="text" id="datepicker"><input type="button" value="ok" onclick="getBirthdays();">
 			  <script>
 					$(function(){
-			 			$.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));
+						$("#datepicker").datepicker();
 						$("#datepicker").datepicker( "setDate" , "0");
+			 			$.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));
 				});
 				</script>
 			</div>
