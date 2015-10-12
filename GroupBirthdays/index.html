@@ -16,11 +16,11 @@
 	<section style="margin-top: 0px;">
 		<div class="container">
 			<div class="row">
-             <input type="text" id="datepicker"><input type="button" value="ok" onclick="alert('wdwdw')">
+             <input type="text" id="datepicker"><input type="button" value="ok" onclick="dd();">
 			  <script>
 					$(function(){
 			 			$.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));
-						 $("#datepicker").datepicker({buttonText:'Нажмите на меня, чтобы выбрать дату'});
+						$("#datepicker").datepicker( "setDate" , "0");
 				});
 				</script>
 			</div>
