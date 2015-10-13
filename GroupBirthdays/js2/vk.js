@@ -43,7 +43,7 @@ function getBirthdays() {
     VK.api("execute", {code: code}, function (r) {
         if (r.response) {
             friends[count] = friends[count].concat(JSON.parse("[" + r.response + "]")); // запишем это в массив
-            alert(friends[]);
+            //alert(friends[]);
             if (r.response.length > 0) {
                 $('#result').html('');
                 $('#result').append('Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
