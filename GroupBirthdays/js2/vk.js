@@ -1,14 +1,14 @@
 /**
  * Created by egor on 13.10.15.
  */
-var user_ids = [];
+var friends = [];
 
 VK.init(
     function () {
     }
 );
 
-function autosize(width) {
+function autosize() {
     //Проверяем элемент body на наличие.
     if (!document.getElementById('body')) {
         alert('error');
@@ -29,36 +29,21 @@ function autosize(width) {
 }
 $(document).ready(function () {
         //Вызываем функцию регулировки высоты каждые пол секунды.
-        setInterval('autosize(607)', 500);
+        setInterval('autosize()', 500);
     }
 );
+
 function getBirthdays() {
-    VK.api('users.search', {'group_id': '37239804', 'birth_day': '3', 'birth_month': '10', 'v': '5.37'}, function (r) {
-            if (r.response) {
-                if (r.response.length > 0) {
-                    $('#result').html('');
-                    $('#result').append('Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
-                    for (var i = 1; i < r.response.length; i++) {
-                        $('#result').append(''
-                            + '<li>'
-                            + '<strong>@' + r.response[i].id + ' (' + r.response[i].first_name + ' ' + r.response[i].last_name + ')' + '</strong>'
-                            + '</li>');
-                    }
-                    $('#result').append('</ol>');
-                }
-            } else {
-                alert("error"); // в случае ошибки выведем её
-            }
-        }
-    );
-}
+    var date = $("#datepicker").datepicker('getDate');
+    var d = date.getDate();         // Day of the month
+    var m = date.getMonth();        // Month with a zero index
 
-function getBirthdaysE() {
-
-    var code = 'return API.users.search({"group_id":"37239804","birth_day":"3","birth_month":"10"});';
+    var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + '});';
 
     VK.api("execute", {code: code}, function (r) {
         if (r.response) {
+            friends[count] = friends[count].concat(JSON.parse("[" + r.response + "]")); // запишем это в массив
+            alert(friends[]);
             if (r.response.length > 0) {
                 $('#result').html('');
                 $('#result').append('Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
