@@ -42,7 +42,7 @@ function getBirthdays() {
             if (r.response.length > 0) {
                 $('#result').html('');
                 $('#result').append('Именинников всего: ' + r.response.length);
-                for (var i = 0; i < r.response.length; i++) {
+                for (var i = 1; i <= r.response.length; i++) {
                     $('#result').append(''
                         + '<li class="c-list">'
                         + '<strong>@'+ r.response[i].id +' (' + r.response[i].first_name + ' ' + r.response[i].last_name +')'+ '</strong>'
