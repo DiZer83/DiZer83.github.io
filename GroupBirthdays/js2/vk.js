@@ -2,6 +2,8 @@
  * Created by egor on 13.10.15.
  */
 var friends = [];
+var count = 0;
+
 
 VK.init(
     function () {
