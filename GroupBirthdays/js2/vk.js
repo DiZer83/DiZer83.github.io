@@ -10,8 +10,9 @@ function getBirthdays() {
     VK.api("execute", {code: code}, function (r) {
         if (r.response) {
             if (r.response.length > 0) {
+                $('#result').html('');
                 for (var i = 0; i < r.response.length; i++) {
-                    $('#errorK').append(''
+                    $('#result').append(''
                         + '<li class="c-list">'
                         + '<div class="contact-pic">'
                         + '<p>data.response[i].id</p>'
