@@ -1,10 +1,6 @@
 /**
  * Created by egor on 13.10.15.
  */
-var friends = [];
-var count = 0;
-
-
 VK.init(
     function () {
     }
@@ -29,6 +25,7 @@ function autosize() {
         alert('error #2');
     }
 }
+
 $(document).ready(function () {
         //Вызываем функцию регулировки высоты каждые пол секунды.
         setInterval('autosize()', 500);
@@ -44,8 +41,6 @@ function getBirthdays() {
 
     VK.api("execute", {code: code}, function (r) {
         if (r.response) {
-            friends[count] = friends[count].concat(JSON.parse("[" + r.response + "]")); // запишем это в массив
-            //alert(friends[]);
             if (r.response.length > 0) {
                 $('#result').html('');
                 $('#result').append('Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
