@@ -32,8 +32,28 @@ $(document).ready(function () {
         setInterval('autosize(607)', 500);
     }
 );
-
 function getBirthdays() {
+    VK.api('users.search', {group_id: 37239804, birth_day: '3', birth_month: '10', v: '5.27'}, function (r) {
+            if (r.response) {
+                if (r.response.length > 0) {
+                    $('#result').html('');
+                    $('#result').append('Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
+                    for (var i = 1; i < r.response.length; i++) {
+                        $('#result').append(''
+                            + '<li>'
+                            + '<strong>@' + r.response[i].id + ' (' + r.response[i].first_name + ' ' + r.response[i].last_name + ')' + '</strong>'
+                            + '</li>');
+                    }
+                    $('#result').append('</ol>');
+                }
+            } else {
+                alert("error"); // в случае ошибки выведем её
+            }
+        }
+    );
+}
+
+function getBirthdaysE() {
 
     var code = 'return API.users.search({"group_id":"37239804","birth_day":"3","birth_month":"10"});';
 
@@ -41,11 +61,11 @@ function getBirthdays() {
         if (r.response) {
             if (r.response.length > 0) {
                 $('#result').html('');
-                $('#result').append('Именинников всего: ' + r.response.count + '<br><ol type="1">');
+                $('#result').append('Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
                 for (var i = 1; i < r.response.length; i++) {
                     $('#result').append(''
                         + '<li>'
-                        + '<strong>@' + r.response.items[i].id + ' (' + r.response[i].first_name + ' ' + r.response[i].last_name + ')' + '</strong>'
+                        + '<strong>@' + r.response[i].id + ' (' + r.response[i].first_name + ' ' + r.response[i].last_name + ')' + '</strong>'
                         + '</li>');
                 }
                 $('#result').append('</ol>');
