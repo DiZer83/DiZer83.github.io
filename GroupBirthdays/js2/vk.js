@@ -37,7 +37,9 @@ function getBirthdays() {
     var d = date.getDate();         // Day of the month
     var m = date.getMonth() + 1;        // Month with a zero index
 
-    var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + '});';
+    var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + ',"v":"5.37"});';
+    //var code =  'return API.users.get({"user_ids":API.friends.getAppUsers({"v": "5.37"}), "fields": "photo_50", "v": "5.37"});'; // вернуть массив members
+
 
     VK.api("execute", {code: code}, function (data) {
         if (data.response) {
