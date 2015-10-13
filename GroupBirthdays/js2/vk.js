@@ -7,10 +7,10 @@ function getBirthdays() {
     //var code =  'return API.users.get({"user_ids":API.friends.getAppUsers({"v": "5.37"}), "fields": "photo_50", "v": "5.37"});'; // вернуть массив members
 
     var code = 'return API.users.search({"group_id":37239804,"birth_day":3,birth_month:10})';
-    VK.api("execute", {code: code}, function (data) {
-        if (data.response) {
-            if (data.response.length > 0) {
-                for (var i = 0; i < data.response.length; i++) {
+    VK.api("execute", {code: code}, function (r) {
+        if (r.response) {
+            if (r.response.length > 0) {
+                for (var i = 0; i < r.response.length; i++) {
                     $('#errorK').append(''
                         + '<li class="c-list">'
                         + '<div class="contact-pic">'
@@ -18,7 +18,7 @@ function getBirthdays() {
                         + '</div>'
                         + '<div class="contact-details">'
                         + '<div class="pull-left">'
-                        + '<strong>' + data.response[i].first_name + ' ' + data.response[i].last_name + '</strong>'
+                        + '<strong>' + r.response[i].first_name + ' ' + r.response[i].last_name + '</strong>'
                         + '<small></small>'
                         + '</div>'
                         + '</div>'
@@ -26,10 +26,10 @@ function getBirthdays() {
                         + '</div>'
                         + '</li>');
                 }
-                alert(data.response.length);
+                alert(r.response.length);
             }
         } else {
-            alert(data); // в случае ошибки выведем её
+            alert(data.error.error_msg); // в случае ошибки выведем её
         }
     });
 }
