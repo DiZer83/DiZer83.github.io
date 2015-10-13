@@ -33,6 +33,3 @@ function getBirthdays() {
         }
     });
 }
-
-function dd() {
-}
