@@ -41,14 +41,14 @@ function getBirthdays() {
         if (r.response) {
             if (r.response.length > 0) {
                 $('#result').html('');
-                $('#result').append('Именинников всего: ' + r.response.length);
+                $('#result').append('Именинников всего: ' + r.response.length - 1 + '<br><ol type="1">');
                 for (var i = 1; i < r.response.length; i++) {
                     $('#result').append(''
-                        + i
-                        +'<strong>@' + r.response[i] + ' (' + r.response[i].first_name + ' ' + r.response[i].last_name + ')' + '</strong>'
-                        + '<br>');
+                        + '<li>'
+                        + '<strong>@' + r.response[i] + ' (' + r.response[i].first_name + ' ' + r.response[i].last_name + ')' + '</strong>'
+                        + '</li>');
                 }
-
+                $('#result').append('</ol>');
             }
         } else {
             alert("error"); // в случае ошибки выведем её
