@@ -43,7 +43,7 @@ function getBirthdays() {
         if (r.response) {
             if (r.response.length > 0) {
                 $('#result').html('');
-                $('#result').append('Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
+                $('#result').append(d + '.' + m + ' ' + 'Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
                 for (var i = 1; i < r.response.length; i++) {
                     $('#result').append(''
                         + '<li>'
