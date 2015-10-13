@@ -37,8 +37,7 @@ function getBirthdays() {
     var d = date.getDate();         // Day of the month
     var m = date.getMonth() + 1;        // Month with a zero index
 
-    var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + ',"v":"5.37"});';
-    //var code =  'return API.users.get({"user_ids":API.friends.getAppUsers({"v": "5.37"}), "fields": "photo_50", "v": "5.37"});'; // вернуть массив members
+    var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m +'});';
 
 
     VK.api("execute", {code: code}, function (data) {
@@ -49,7 +48,7 @@ function getBirthdays() {
                 for (var i = 1; i < data.response.length; i++) {
                     $('#result').append(''
                         + '<li>'
-                        + '<strong>' + data.response[i].id + ' (' + data.response[i].first_name + ' ' + data.response[i].last_name + ')</strong>'
+                        + '<strong>' + data.response[i].uid + ' (' + data.response[i].first_name + ' ' + data.response[i].last_name + ')</strong>'
                         + '</li>');
                 }
                 $('#result').append('</ol>');
