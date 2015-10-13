@@ -47,7 +47,7 @@ function getBirthdays() {
                 $('#result').html('');
                 $('#result').append(d + '.' + m + ' ' + 'Именинников всего: ' + (data.response.length - 1));
                 for (var i = 1; i < data.response.length; i++) {
-                    text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']?';
+                    text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + '] ';
                 }
                 $('#result').val(text);
             }
