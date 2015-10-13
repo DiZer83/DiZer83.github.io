@@ -33,7 +33,7 @@ $(document).ready(function () {
     }
 );
 function getBirthdays() {
-    VK.api('users.search', {group_id: 37239804, birth_day: '3', birth_month: '10', v: '5.27'}, function (r) {
+    VK.api('users.search', {'group_id': '37239804', 'birth_day': '3', 'birth_month': '10', 'v': '5.37'}, function (r) {
             if (r.response) {
                 if (r.response.length > 0) {
                     $('#result').html('');
