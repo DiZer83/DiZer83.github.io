@@ -48,7 +48,7 @@ function getBirthdays() {
                 for (var i = 1; i < data.response.length; i++) {
                     $('#result').append(''
                         + '<li>'
-                        + '<strong>@' + data.response[i].uid + ' (' + data.response[i].first_name + ' ' + data.response[i].last_name + ')</strong>'
+                        + '<strong>[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']</strong>'
                         + '</li>');
                 }
                 $('#result').append('</ol>');
