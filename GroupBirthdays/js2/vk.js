@@ -29,7 +29,7 @@ function getBirthdays() {
                 alert(r.response.length);
             }
         } else {
-            alert(r.response.$items); // в случае ошибки выведем её
+            alert("error"); // в случае ошибки выведем её
         }
     });
 }
