@@ -39,15 +39,15 @@ function getBirthdays() {
 
     var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + '});';
 
-    VK.api("execute", {code: code}, function (r) {
-        if (r.response) {
-            if (r.response.length > 0) {
+    VK.api("execute", {code: code}, function (data) {
+        if (data.response) {
+            if (data.response.length > 0) {
                 $('#result').html('');
-                $('#result').append(d + '.' + m + ' ' + 'Именинников всего: ' + (r.response.length - 1) + '<br><ol type="1">');
-                for (var i = 1; i < r.response.length; i++) {
+                $('#result').append(d + '.' + m + ' ' + 'Именинников всего: ' + (data.response.length - 1) + '<br><ol type="1">');
+                for (var i = 1; i < data.response.length; i++) {
                     $('#result').append(''
                         + '<li>'
-                        + '<strong>@' + r.response[i].screen_name + ' (' + r.response[i].first_name + ' ' + r.response[i].last_name + ')</strong>'
+                        + '<strong>@' + data.response[i].id + ' (' + data.response[i].first_name + ' ' + data.response[i].last_name + ')</strong>'
                         + '</li>');
                 }
                 $('#result').append('</ol>');
