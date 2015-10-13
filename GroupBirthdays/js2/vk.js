@@ -43,14 +43,13 @@ function getBirthdays() {
     VK.api("execute", {code: code}, function (data) {
         if (data.response) {
             if (data.response.length > 0) {
+                var text = "";
                 $('#result').html('');
-                $('#result').append(d + '.' + m + ' ' + 'Именинников всего: ' + (data.response.length - 1) + '<br><ol type="1">');
+                $('#result').append(d + '.' + m + ' ' + 'Именинников всего: ' + (data.response.length - 1));
                 for (var i = 1; i < data.response.length; i++) {
-                    $('#result').append(''
-                        + '<strong>[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']</strong>'
-                        +'/n');
+                    text = text + '<strong>[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']</strong>/n';
                 }
-                $('#result').append('</ol>');
+                $('#result').val(text);
             }
         } else {
             alert("error"); // в случае ошибки выведем её
