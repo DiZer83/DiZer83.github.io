@@ -30,25 +30,6 @@
 		</div>
 		</div>
 	</section>
-	<!-- Скрипт получения фоток друзей и непосредственно их вывод-->
-	<script>
-		// Функция получения друзей и вывода их на экран
-		function doIt(){
-			/*
-			 VK.api('метод', {параметр: "значение"}, callback функция{
-			 // работаем с полученными данными
-			 });
-			 */
-			VK.api("friends.get", {fields: "photo_medium"}, function(data) {
-				// Действия с полученными данными
-				for(var c=0;c<data.response.length;c++){
-					$("body").append("<img src='"+data.response[c].photo_medium+"'>");
-				}
-			});
-		}
-		$(document).ready(function(){
-			doIt();
-		});
-	</script>
+	<script src="js2/vk.js" type="text/javascript"></script>
 </body>
 </html>
