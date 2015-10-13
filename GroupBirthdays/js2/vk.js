@@ -4,7 +4,7 @@
 var user_ids = [];
 function getBirthdays() {
 
-    var code = 'return API.users.search({"group_id":37239804,"birth_day":"3","birth_month":"10","v": "5.37"})';
+    var code = 'return API.users.search({"group_id":37239804,"birth_day":"3","birth_month":"10"})';
 
     VK.api("execute", {code: code}, function (r) {
         if (r.response) {
