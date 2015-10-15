@@ -7,7 +7,7 @@
 }
 
 #res {
-    float: left;
+    float: inherit;
 }
 
 #imgsel {
