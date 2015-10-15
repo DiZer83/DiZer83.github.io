@@ -5,3 +5,8 @@
     min-height:250px;
     width: 550px;
 }
+#imgsel{
+    width: 16px;
+    height: 16px;
+    float: right;
+}
