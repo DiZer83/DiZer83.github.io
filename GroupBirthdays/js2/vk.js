@@ -32,9 +32,9 @@ function autosize(width) {
     }
 }
 
-function getBirthdays(inst) {
-    var d = inst.selectedDay;   // Day of the month
-    var m = inst.selectedMonth + 1;        // Month with a zero index
+function getBirthdays(separator) {
+    var d = $("#datepicker").datepicker('getDate').getDay();   // Day of the month
+    var m = $("#datepicker").datepicker('getDate').getMonth() + 1;        // Month with a zero index
 
     var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + '});';
 
@@ -43,9 +43,9 @@ function getBirthdays(inst) {
             if (data.response.length > 0) {
                 var text = "";
                 $('#res').html('');
-                $('#res').append('Именинников всего: ' + (data.response.length - 1));
+                $('#res').append(d + '.' + m + ' Именинников всего: ' + (data.response.length - 1));
                 for (var i = 1; i < data.response.length; i++) {
-                    text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']&#127880;';
+                    text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']' + separator; //&#127880;
                 }
                 $('#result').val(text);
             }
@@ -56,8 +56,7 @@ function getBirthdays(inst) {
 }
 
 
-function showSmile()
-{
+function showSmile() {
     document.getElementById('smile').style.visibility = 'visible';
 }
 

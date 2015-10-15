@@ -27,8 +27,8 @@
                             $("#datepicker").datepicker({
                                 dateFormat: 'dd.mm.yy',
                                 defaultDate: +1,
-                                onSelect: function (dateText, inst) {
-                                    getBirthdays(inst);
+                                onSelect: function () {
+                                    getBirthdays(' ');
                                 }
                             });
                             $("#datepicker").datepicker("setDate", "0");
@@ -40,7 +40,7 @@
                 </div>
                 <div id="res">&nbsp;&nbsp;</div>
                 <div id="imgsel">
-                    <img src="https://vk.com/images/emoji/D83CDF88.png"/>
+                    <img src="https://vk.com/images/emoji/D83CDF88.png" onclick="getBirthdays('&#127880;')"  />
                 </div>
             </div>
         </div>
