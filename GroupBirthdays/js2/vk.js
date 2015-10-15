@@ -39,13 +39,12 @@ function getBirthdays() {
 
     var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m +'});';
 
-
     VK.api("execute", {code: code}, function (data) {
         if (data.response) {
             if (data.response.length > 0) {
                 var text = "";
-                $('#result').html('');
-                $('#result').append(d + '.' + m + ' ' + 'Именинников всего: ' + (data.response.length - 1));
+                $('#res').html('');
+                $('#res').append(d + '.' + m + ' ' + 'Именинников всего: ' + (data.response.length - 1));
                 for (var i = 1; i < data.response.length; i++) {
                     text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + '] ';
                 }
