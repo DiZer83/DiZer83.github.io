@@ -6,6 +6,8 @@
     width: 590px;
 }
 
+.row{width: 590px;}
+
 #res {
     float: inherit;
 }
@@ -16,7 +18,10 @@
     float: right;
 }
 
+#box {
+    white-space: nowrap;
 }
-input#datepicker {
-    float: left;
+
+#box div {
+    display: inline-block;
 }
