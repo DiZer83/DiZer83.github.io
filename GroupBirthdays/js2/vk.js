@@ -6,6 +6,12 @@ VK.init(
     }
 );
 
+$(document).ready(function () {
+        //Вызываем функцию регулировки высоты каждые пол секунды.
+        setInterval('autosize(607)', 500);
+    }
+);
+
 function autosize(width) {
     //Проверяем элемент body на наличие.
     if (!document.getElementById('body')) {
@@ -26,17 +32,11 @@ function autosize(width) {
     }
 }
 
-$(document).ready(function () {
-        //Вызываем функцию регулировки высоты каждые пол секунды.
-        setInterval('autosize(607)', 500);
-    }
-);
-
 function getBirthdays(inst) {
     var d = inst.selectedDay;   // Day of the month
     var m = inst.selectedMonth + 1;        // Month with a zero index
 
-    var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m +'});';
+    var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + '});';
 
     VK.api("execute", {code: code}, function (data) {
         if (data.response) {
@@ -45,7 +45,7 @@ function getBirthdays(inst) {
                 $('#res').html('');
                 $('#res').append('Именинников всего: ' + (data.response.length - 1));
                 for (var i = 1; i < data.response.length; i++) {
-                    text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + '] ';
+                    text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']&#127880;';
                 }
                 $('#result').val(text);
             }
@@ -54,3 +54,10 @@ function getBirthdays(inst) {
         }
     });
 }
+
+
+function showSmile()
+{
+    document.getElementById('smile').style.visibility = 'visible';
+}
+
