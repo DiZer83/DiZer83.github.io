@@ -33,7 +33,8 @@ function autosize(width) {
 }
 
 function getBirthdays(separator) {
-    var d = $("#datepicker").datepicker('getDate').getDay();   // Day of the month
+
+    var d = $("#datepicker").datepicker('getDate').getDate();   // Day of the month
     var m = $("#datepicker").datepicker('getDate').getMonth() + 1;        // Month with a zero index
 
     var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m + '});';
