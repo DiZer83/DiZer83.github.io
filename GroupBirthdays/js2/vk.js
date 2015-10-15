@@ -32,10 +32,9 @@ $(document).ready(function () {
     }
 );
 
-function getBirthdays() {
-    var date = $("#datepicker").datepicker('getDate');
-    var d = date.getDate();         // Day of the month
-    var m = date.getMonth() + 1;        // Month with a zero index
+function getBirthdays(inst) {
+    var d = inst.selectedDay;   // Day of the month
+    var m = inst.selectedMonth + 1;        // Month with a zero index
 
     var code = 'return API.users.search({"group_id":"37239804","birth_day":' + d + ',"birth_month":' + m +'});';
 

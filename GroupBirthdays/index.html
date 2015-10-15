@@ -24,12 +24,15 @@
                                                                         onclick="getBirthdays();">
                 <script>
                     $(function () {
-                        $("#datepicker").datepicker();
-                        $("#datepicker").datepicker({dateFormat:'dd.mm.yy'});
+                        $("#datepicker").datepicker({
+                            dateFormat: 'dd.mm.yy',
+                            defaultDate: +1,
+                            onSelect: function (dateText, inst) {
+                                getBirthdays(inst);
+                            }
+                        });
                         $("#datepicker").datepicker("setDate", "0");
                         $.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));
-                        $("#datepicker").datepicker({create:function(){getBirthdays()}});
-                        $("#datepicker").datepicker({onSelect:function(){getBirthdays()}});
                     });
                 </script>
                 <div id="imgsel">
