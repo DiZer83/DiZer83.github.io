@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Именинники группы Вызов</title>
+    <meta charset="utf-8">
+    <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
+    <link type="text/css" href="css/smoothness/jquery-ui-1.9.2.custom.css" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+    <script src="js/i18n/jquery-ui-i18n.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta name="keywords" content="Именинники группы Вызов"/>
+    <meta name="description" content="Именинники группы Вызов"/>
+</head>
+
+<body id='body'>
+<section style="margin-top: 0px;">
+    <div class="container">
+        <div class="row">
+            Выберите дату:<br>
+
+            <div id="box">
+                <div id="datesel"><input type="text" id="datepicker">
+                    <script>
+                        $(function () {
+                            $("#datepicker").datepicker({
+                                dateFormat: 'dd.mm.yy',
+                                defaultDate: +1,
+                                onSelect: function () {
+                                    getBirthdays(' ');
+                                }
+                            });
+                            $("#datepicker").datepicker("setDate", "0");
+                            $.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));
+                        });
+
+                    </script>
+
+                </div>
+                <div id="res">&nbsp;&nbsp;</div>
+                <div id="imgsel">
+                    <img src="https://vk.com/images/emoji/D83CDF77.png" onclick="getBirthdays('&#127863;')">
+                    <img src="https://vk.com/images/emoji/D83CDF81.png" onclick="getBirthdays('&#127873;')">
+                    <img src="https://vk.com/images/emoji/D83CDF82.png" onclick="getBirthdays('&#127874;')">
+                    <img src="https://vk.com/images/emoji/D83CDF88.png" onclick="getBirthdays('&#127880;')">
+                </div>
+            </div>
+        </div>
+        <div><textarea id="result"></textarea></div>
+        <!--<div id="smile"></div>-->
+    </div>
+</section>
+<script src="js2/vk.js" type="text/javascript"></script>
+</body>
+</html>
