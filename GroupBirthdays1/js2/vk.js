@@ -40,7 +40,6 @@ function getBirthdays(separator) {
     var code = 'return API.users.search({"group_id":"41050231","count":"1000","birth_day":' + d + ',"birth_month":' + m + '});';
 
     VK.api("execute", {code: code}, function (data) {
-        alert(data.response);
         if (data.response) {
             if (data.response.length > 0) {
                 var text = "";
