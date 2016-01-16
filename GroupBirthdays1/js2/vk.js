@@ -37,9 +37,10 @@ function getBirthdays(separator) {
     var d = $("#datepicker").datepicker('getDate').getDate();   // Day of the month
     var m = $("#datepicker").datepicker('getDate').getMonth() + 1;        // Month with a zero index
 
-    var code = 'return API.users.search({"group_id":"41050231","birth_day":' + d + ',"birth_month":' + m + '});';
+    var code = 'return API.users.search({"group_id":"41050231","count":"1000","birth_day":' + d + ',"birth_month":' + m + '});';
 
     VK.api("execute", {code: code}, function (data) {
+        alert(data.response);
         if (data.response) {
             if (data.response.length > 0) {
                 var text = "";
