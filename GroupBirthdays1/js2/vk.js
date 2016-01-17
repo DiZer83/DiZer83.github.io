@@ -32,7 +32,7 @@ function autosize(width) {
 }
 
 function copyText() {
-    var copyBtn = document.querySelector('.click-to-copy');
+    var copyBtn = document.querySelector('.btnCopyText');
 
     var cutTextarea = document.querySelector('.result');
     cutTextarea.select();
@@ -40,7 +40,7 @@ function copyText() {
     try {
         var successful = document.execCommand('copy');
         var msg = successful ? 'successful' : 'unsuccessful';
-        alert('Cutting text command was ' + msg);
+        //alert('Cutting text command was ' + msg);
     } catch (err) {
         alert('Oops, unable to copy');
     }
@@ -48,6 +48,7 @@ function copyText() {
 }
 
 function getBirthdays(imgs,separator) {
+
     $('.selected').removeClass('selected'); // removes the previous selected class
     if(imgs){
         $(imgs).addClass('selected');
