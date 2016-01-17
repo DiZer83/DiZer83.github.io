@@ -40,7 +40,6 @@ function copyText() {
     try {
         var successful = document.execCommand('copy');
         var msg = successful ? 'successful' : 'unsuccessful';
-        copyBtn.value('Скопировано');
         //alert('Cutting text command was ' + msg);
     } catch (err) {
         alert('Oops, unable to copy');
@@ -49,9 +48,6 @@ function copyText() {
 }
 
 function getBirthdays(imgs,separator) {
-    var copyBtn = document.querySelector('.btnCopyText');
-    copyBtn.value('Скопировать');
-
 
     $('.selected').removeClass('selected'); // removes the previous selected class
     if(imgs){
