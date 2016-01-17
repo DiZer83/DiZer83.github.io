@@ -32,13 +32,15 @@ function autosize(width) {
 }
 
 function copyText() {
+    var copyBtn = document.querySelector('.btnCopyText');
+
     var cutTextarea = document.querySelector('.result');
     cutTextarea.select();
 
     try {
         var successful = document.execCommand('copy');
         var msg = successful ? 'successful' : 'unsuccessful';
-        $(".btnCopyText").prop('value','Скопировано');
+        copyBtn.value('Скопировано');
         //alert('Cutting text command was ' + msg);
     } catch (err) {
         alert('Oops, unable to copy');
@@ -47,7 +49,10 @@ function copyText() {
 }
 
 function getBirthdays(imgs,separator) {
-    $(".btnCopyText").prop('value','Скопировать');
+    var copyBtn = document.querySelector('.btnCopyText');
+    copyBtn.value('Скопировать');
+
+
     $('.selected').removeClass('selected'); // removes the previous selected class
     if(imgs){
         $(imgs).addClass('selected');
