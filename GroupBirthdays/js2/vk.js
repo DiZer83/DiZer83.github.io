@@ -10,7 +10,7 @@ $(document).ready(function () {
         //Вызываем функцию регулировки высоты каждые пол секунды.
         setInterval('autosize(607)', 500);
         var client2 = new ZeroClipboard($("#click-to-copy"), {
-        moviePath: "/js/ZeroClipboard.swf"
+        moviePath: "ZeroClipboard.swf"
     });
 
     client2.on("load", function(client2) {
