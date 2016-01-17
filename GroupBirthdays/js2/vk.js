@@ -34,9 +34,8 @@ function autosize(width) {
 
 
 function getBirthdays(imgs,separator) {
-
+    $('.selected').removeClass('selected'); // removes the previous selected class
     if(imgs){
-        $('.selected').removeClass('selected'); // removes the previous selected class
         $(imgs).addClass('selected');
     }
     var d = $("#datepicker").datepicker('getDate').getDate();   // Day of the month
