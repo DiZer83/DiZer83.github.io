@@ -9,8 +9,7 @@ VK.init(
 $(document).ready(function () {
         //Вызываем функцию регулировки высоты каждые пол секунды.
         setInterval('autosize(607)', 500);
-    }
-);
+});
 
 function autosize(width) {
     //Проверяем элемент body на наличие.
@@ -32,8 +31,27 @@ function autosize(width) {
     }
 }
 
-function getBirthdays(separator) {
+function copyText() {
+    var copyBtn = document.querySelector('.click-to-copy');
 
+    var cutTextarea = document.querySelector('.result');
+    cutTextarea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        alert('Cutting text command was ' + msg);
+    } catch (err) {
+        alert('Oops, unable to copy');
+    }
+
+}
+
+function getBirthdays(imgs,separator) {
+    $('.selected').removeClass('selected'); // removes the previous selected class
+    if(imgs){
+        $(imgs).addClass('selected');
+    }
     var d = $("#datepicker").datepicker('getDate').getDate();   // Day of the month
     var m = $("#datepicker").datepicker('getDate').getMonth() + 1;        // Month with a zero index
 
@@ -55,9 +73,3 @@ function getBirthdays(separator) {
         }
     });
 }
-
-
-function showSmile() {
-    document.getElementById('smile').style.visibility = 'visible';
-}
-
