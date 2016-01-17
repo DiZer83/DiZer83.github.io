@@ -9,6 +9,7 @@
     <script src="js/jquery-1.8.3.js" type="text/javascript"></script>
     <script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
     <script src="js/i18n/jquery-ui-i18n.js" type="text/javascript"></script>
+    <script src="js/ZeroClipboard.js"></script>
     <link rel="icon" type="image/png" href="favicon.png"/>
     <meta name="keywords" content="Именинники группы Вызов"/>
     <meta name="description" content="Именинники группы Вызов"/>
@@ -79,7 +80,7 @@
         <td colspan="3"><textarea id="result"></textarea></td>
     </tr>
 </table>
-    <p><button class="cpbtn">Скопировать</button></p>
+    <p><button data-clipboard-target="result" id="cres">Скопировать</button></p>
 </section>
 <script src="js2/vk.js" type="text/javascript"></script>
 </body>

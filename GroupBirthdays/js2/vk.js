@@ -60,8 +60,16 @@ function getBirthdays(imgs,separator) {
     });
 }
 
+$(document).ready(function () {
 
-function showSmile() {
-    document.getElementById('smile').style.visibility = 'visible';
-}
+    var client2 = new ZeroClipboard($("#cres"), {
+        moviePath: "ZeroClipboard.swf"
+    });
 
+    client2.on("load", function(client2) {
+        client2.on("complete", function(client2, args) {
+            $('#cres').hide(); // скрываем для наглядности кнопку
+        });
+    });
+
+};
