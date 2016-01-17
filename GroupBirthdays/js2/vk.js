@@ -35,7 +35,7 @@ function autosize(width) {
 
 function getBirthdays(imgs,separator) {
     if(imgs){
-        imgs.style.border = "1px solid blue";
+        imgs.style.border = "1px solid gray";
     }
     var d = $("#datepicker").datepicker('getDate').getDate();   // Day of the month
     var m = $("#datepicker").datepicker('getDate').getMonth() + 1;        // Month with a zero index
