@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="16e2c38f-6b98-42bf-8375-937dcda371eb" name="Default" comment="``">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroupBirthdays/css/style.css" afterPath="$PROJECT_DIR$/GroupBirthdays/css/style.css" />
     </list>
     <ignored path="DiZer83.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -390,7 +389,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453043388124</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="``">
+      <created>1453043456751</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1453043456751</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
