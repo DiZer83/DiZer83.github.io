@@ -32,6 +32,8 @@ function autosize(width) {
 }
 
 function copyText() {
+    var copyBtn = document.querySelector('#click-to-copy');
+
     var cutTextarea = document.querySelector('#result');
     cutTextarea.select();
 
