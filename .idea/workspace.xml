@@ -4,6 +4,7 @@
     <list default="true" id="16e2c38f-6b98-42bf-8375-937dcda371eb" name="Default" comment="wdwrrr">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroupBirthdays/index.html" afterPath="$PROJECT_DIR$/GroupBirthdays/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroupBirthdays/js2/vk.js" afterPath="$PROJECT_DIR$/GroupBirthdays/js2/vk.js" />
     </list>
     <ignored path="DiZer83.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GroupBirthdays/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5546075">
-              <caret line="48" column="89" selection-start-line="48" selection-start-column="89" selection-end-line="48" selection-end-column="89" />
+            <state vertical-scroll-proportion="-2.7037036">
+              <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -36,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vk.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vk.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GroupBirthdays/js2/vk.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.51549757">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -60,8 +61,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GroupBirthdays1/js2/vk.js" />
-        <option value="$PROJECT_DIR$/GroupBirthdays/js2/vk.js" />
         <option value="$PROJECT_DIR$/GroupBirthdays/index.html" />
+        <option value="$PROJECT_DIR$/GroupBirthdays/js2/vk.js" />
       </list>
     </option>
   </component>
@@ -331,7 +332,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453041670000</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="wdwrrr">
+      <created>1453042222275</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1453042222275</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -431,21 +438,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GroupBirthdays/js2/vk.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GroupBirthdays/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5546075">
-          <caret line="48" column="89" selection-start-line="48" selection-start-column="89" selection-end-line="48" selection-end-column="89" />
+        <state vertical-scroll-proportion="-2.7037036">
+          <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GroupBirthdays/js2/vk.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51549757">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

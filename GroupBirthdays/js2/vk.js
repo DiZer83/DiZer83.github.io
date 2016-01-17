@@ -32,6 +32,10 @@ function autosize(width) {
     }
 }
 
+function mark(i1) {
+    i1.style.border = "1px solid blue";
+}
+
 function getBirthdays(separator) {
 
     var d = $("#datepicker").datepicker('getDate').getDate();   // Day of the month
