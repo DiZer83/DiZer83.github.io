@@ -14,10 +14,20 @@
     float: inherit;
 }
 
-#imgsel {
-    /*width: 16px;*/
+/*#imgsel {
+    width: 16px;
     height: 16px;
     float: right;
+}
+*/
+
+img {
+    /*border: solid 1px red;*/
+    margin: 2px;
+}
+
+.selected {
+    box-shadow: 2px 2px 2px 2px #333;
 }
 
 #box {
