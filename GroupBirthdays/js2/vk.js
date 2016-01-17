@@ -9,16 +9,6 @@ VK.init(
 $(document).ready(function () {
         //Вызываем функцию регулировки высоты каждые пол секунды.
         setInterval('autosize(607)', 500);
-        var client2 = new ZeroClipboard($("#click-to-copy"), {
-        moviePath: "ZeroClipboard.swf"
-    });
-
-    client2.on("load", function(client2) {
-        client2.on("complete", function(client2, args) {
-            $('#click-to-copy').prop('value', 'Скопировано'); // скрываем для наглядности кнопку
-        });
-    });
-
 });
 
 function autosize(width) {
@@ -41,9 +31,21 @@ function autosize(width) {
     }
 }
 
+function copyText() {
+    var cutTextarea = document.querySelector('#result');
+    cutTextarea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Cutting text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to cut');
+    }
+
+}
 
 function getBirthdays(imgs,separator) {
-    $('#click-to-copy').prop('value', 'Скопировать');
     $('.selected').removeClass('selected'); // removes the previous selected class
     if(imgs){
         $(imgs).addClass('selected');
