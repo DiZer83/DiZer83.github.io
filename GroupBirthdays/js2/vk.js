@@ -44,7 +44,7 @@ function getBirthdays(separator) {
             if (data.response.length > 0) {
                 var text = "";
                 $('#res').html('');
-                $('#res').append('&nbsp;Именинников всего: ' + (data.response.length - 1));
+                $('#res').append('Именинников всего: ' + (data.response.length - 1));
                 for (var i = 1; i < data.response.length; i++) {
                     text = text + '[id' + data.response[i].uid + '|' + data.response[i].first_name + ' ' + data.response[i].last_name + ']' + separator; //&#127880;
                 }
