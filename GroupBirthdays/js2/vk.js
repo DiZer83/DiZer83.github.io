@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     client2.on("load", function(client2) {
         client2.on("complete", function(client2, args) {
-            $('#click-to-copy').value('Скопировано'); // скрываем для наглядности кнопку
+            $('#click-to-copy').prop('value', 'Скопировано'); // скрываем для наглядности кнопку
         });
     });
 
@@ -43,7 +43,7 @@ function autosize(width) {
 
 
 function getBirthdays(imgs,separator) {
-    $('#click-to-copy').value('Скопировать');
+    $('#click-to-copy').prop('value', 'Скопировать');
     $('.selected').removeClass('selected'); // removes the previous selected class
     if(imgs){
         $(imgs).addClass('selected');
