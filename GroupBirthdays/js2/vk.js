@@ -72,5 +72,3 @@ function copyresult() {
         console.log('Oops, unable to cut');
     }
 }
-)
-}
