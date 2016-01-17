@@ -9,8 +9,17 @@ VK.init(
 $(document).ready(function () {
         //Вызываем функцию регулировки высоты каждые пол секунды.
         setInterval('autosize(607)', 500);
-    }
-);
+        var client2 = new ZeroClipboard($("#click-to-copy"), {
+        moviePath: "ZeroClipboard.swf"
+    });
+
+    client2.on("load", function(client2) {
+        client2.on("complete", function(client2, args) {
+            $('#click-to-copy').hide(); // скрываем для наглядности кнопку
+        });
+    });
+
+});
 
 function autosize(width) {
     //Проверяем элемент body на наличие.
@@ -58,17 +67,4 @@ function getBirthdays(imgs,separator) {
             alert("error"); // в случае ошибки выведем её
         }
     });
-}
-
-function copyresult() {
-    var cutTextarea = document.querySelector('.result');
-    cutTextarea.select();
-
-    try {
-        var successful = document.execCommand('copy');
-        var msg = successful ? 'successful' : 'unsuccessful';
-        console.log('Cutting text command was ' + msg);
-    } catch(err) {
-        console.log('Oops, unable to cut');
-    }
 }
