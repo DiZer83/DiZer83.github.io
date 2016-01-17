@@ -2,6 +2,8 @@
   <dictionary name="egor">
     <words>
       <w>autosize</w>
+      <w>imgsel</w>
+      <w>textarea</w>
     </words>
   </dictionary>
 </component>

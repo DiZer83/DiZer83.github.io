@@ -59,3 +59,18 @@ function getBirthdays(imgs,separator) {
         }
     });
 }
+
+function copyresult() {
+    var cutTextarea = document.querySelector('.result');
+    cutTextarea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Cutting text command was ' + msg);
+    } catch(err) {
+        console.log('Oops, unable to cut');
+    }
+}
+)
+}
